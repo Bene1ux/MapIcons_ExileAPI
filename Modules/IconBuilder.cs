@@ -1,4 +1,4 @@
-﻿using ExileCore.PoEMemory;
+using ExileCore.PoEMemory;
 using ExileCore.PoEMemory.Components;
 using ExileCore.PoEMemory.MemoryObjects;
 using ExileCore.Shared.Enums;
@@ -547,6 +547,7 @@ public sealed class IconBuilder : PluginModule {
             var icon = new MapIcon(entity);
             icon.Settings = customPathIconSettings;
             icon.Type = MapIconTypes.CustomPath;
+            icon.Renderer = MapIconRenderers.Default;
             icon.Name = entity.RenderName;
             icon.Show = () => true;
             DebugCustomIcon(icon);
