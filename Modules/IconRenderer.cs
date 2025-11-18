@@ -1,4 +1,4 @@
-﻿using DieselTools_ExileAPI;
+using DieselTools_ExileAPI;
 using ExileCore.PoEMemory.Components;
 using ExileCore.PoEMemory.MemoryObjects;
 using ExileCore.Shared.Cache;
@@ -125,6 +125,8 @@ namespace MapIcons {
                 switch (mapIcon.Renderer) {
                     case MapIconRenderers.Default:
                         iconColor = mapIcon.Hidden() ? mapIcon.Settings.HiddenTint : mapIcon.Settings.Tint;
+                        // icon
+                        Graphics.DrawImage(iconFileName, mapIcon.DrawRect.Value, iconUV, iconColor);
                         // text
                         if (mapIcon.Settings.DrawName) Graphics.DrawText(mapIcon.Name, iconPosition.Translate(0, 0), FontAlign.Center);
                         break;
