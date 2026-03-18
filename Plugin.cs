@@ -13,7 +13,7 @@ public class Plugin : BaseSettingsPlugin<Settings>
 {
     //--| Properties |---------------------------------------------------------------------------------------------------
     private DT.IconAtlas _iconAtlas;
-    public DT.IconAtlas IconAtlas => _iconAtlas ??= new(Graphics, "Diesel_MapIcons", Path.Combine(Path.GetDirectoryName(typeof(MapIcon).Assembly.Location), "media", "MapIcons.png"), new Vector2(32, 32));
+    public DT.IconAtlas IconAtlas => _iconAtlas ??= new(Graphics, "Diesel_MapIcons", Path.Combine(DirectoryFullName, "media", "MapIcons.png"), new Vector2(32, 32));
     
     private IconBuilder _iconBuilder;       
     public IconBuilder IconBuilder => _iconBuilder ??= new IconBuilder(this);

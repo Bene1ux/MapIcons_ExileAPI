@@ -43,7 +43,8 @@ namespace DieselTools_ExileAPI
                     IsIdentified = mods.Identified;
                 }
 
-                var MapTier = Entity.TryGetComponent<Map>(out var map) ? map.Tier : 0;
+                //todo fix (if i ever need to u se it)
+                var MapTier = 16;/*Entity.TryGetComponent<Map>(out var map) ? map.Tier : 0;*/
                 IsMap = MapTier > 0;
                 IsT17Map = MapTier == 17;
             }
